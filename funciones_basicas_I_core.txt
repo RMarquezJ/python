@@ -1,0 +1,148 @@
+1)
+var	val
+----------
+a	5
+	
+console:
+5
+
+2)
+var	val
+-----------
+a	5
+print	5+5
+
+console:
+10
+
+3)
+var	val
+-----------
+a	5 -> 10
+
+console:
+5
+
+4)
+
+var	val
+-----------
+return	5
+print	10
+
+console:
+5
+
+5)
+var	val
+-----------
+print	5
+x	a
+
+console:
+5
+none
+
+6)
+var	val
+-----------
+print1	3
+print2	5
+
+console:
+3
+5
+
+7)
+var	val
+-----------
+b	"2"
+c	"5"
+
+console:
+25
+
+8)
+var	val
+-----------
+b	100
+return	 10
+
+console:
+100
+10
+
+9)
+var	val
+-----------
+print1	7
+print2	14
+print3	7 + 14
+
+console:
+7
+14
+21
+
+10)
+var	val
+-----------
+b	3
+c	5
+return	8
+
+console:
+8
+
+11)
+var	val
+-----------
+b	500 --> 300
+
+console:
+500
+500
+300
+500
+
+12)
+var	val
+-----------
+b	500 --> 300
+
+500
+500
+300
+500
+
+13)
+var	val
+-----------
+b	500 -> 300
+
+console:
+500
+500
+300
+300
+
+14)
+var	val
+-----------
+print1	1
+print2	2
+
+console:
+1
+3
+2
+
+15)
+var	val
+-----------
+
+console:
+1
+3
+5
+10
