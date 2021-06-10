@@ -47,20 +47,9 @@ iterateDictionary(students)
 #3 - Obtén valores de una lista de diccionarios
 #Crea una función iterateDictionary2(key_name, some_list)que, dada una lista de diccionarios y un nombre de clave, la función imprima el valor almacenado en esa clave para cada diccionario. Por ejemplo, iterateDictionary2 ('first_name', students) debería generar:
 
-def iterateDictionary2(key_name, some_list):
-    llaves, valores  = [], []
-    for i in range(len(some_list)):
-        for llave, valor in some_list[i].items():
-            llaves.append(llave)
-            valores.append(valor)
-    for i in range(len(llaves)):
-        if key_name == llaves[i]:
-            print(valores[i])
-iterateDictionary2('first_name', students)
-
-def iterateDictionary2(key_name, some_list):
-    for i in range(len(some_list)):
-        print(some_list[i][key_name])
+def iterateDictionary2(key,list):
+    for i in range(len(list)):
+        print(list[i][key])
 iterateDictionary2 ('first_name', students)
 iterateDictionary2('last_name', students)
 
@@ -74,7 +63,8 @@ dojo = {
 }
 def printInfo(list):
   for key, value in list.items():
-    print(f'{len(key)} - {key.upper()} - {value}')
+    print(f'{len(key)} - {key.upper()}')
+    print(f'{value}')
 printInfo(dojo)
 
 
