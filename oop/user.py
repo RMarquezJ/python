@@ -15,8 +15,11 @@ class User:
     print('User: ' + self.name + ', Balance :' + str(self.account_balance))
 
   def transfer_money(self, receiver, amount):
-    self.account_balance -= amount
-    receiver.account_balance += amount
+    if self.account_balance>=amount:
+      self.account_balance -= amount
+      receiver.account_balance += amount
+    else:
+      print('Insuficcient balance')
 
 guido = User('Guido van Rossum', 'guido@python.com')
 monty = User('Monty Python', 'monty@python.com')
@@ -50,5 +53,7 @@ guido.transfer_money(pedro, 500)
 
 guido.display_user_balance()
 pedro.display_user_balance()
+
+guido.transfer_money(pedro,500)
 
 
