@@ -7,9 +7,11 @@ class User:
 
   def make_deposit(self,amount):
     self.account_balance += amount
+    return self
 
   def make_withdraw(self,amount):
     self.account_balance -= amount
+    return self
 
   def display_user_balance(self):
     print('User: ' + self.name + ', Balance :' + str(self.account_balance))
@@ -56,4 +58,4 @@ pedro.display_user_balance()
 
 guido.transfer_money(pedro,500)
 
-
+guido.make_deposit(100).make_deposit(500).make_withdraw(300).display_user_balance()
