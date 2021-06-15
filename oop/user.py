@@ -2,8 +2,8 @@ class User:
   
   def __init__(self,name,email):
     self.name = name
-    self.email= email
-    self.account_balance=0
+    self.email = email
+    self.account_balance = 0
 
   def make_deposit(self,amount):
     self.account_balance += amount
@@ -26,6 +26,35 @@ class User:
 guido = User('Guido van Rossum', 'guido@python.com')
 monty = User('Monty Python', 'monty@python.com')
 pedro = User('Pedro Picapiedra', 'pedro@python.com')
+
+class BankAccount:
+  def __init__(self, int_rate=0.01, balance=0):
+    self.int_rate = int_rate
+    self.balance = balance
+  
+  def deposit(self,amount):
+    self.balance += amount
+    return self
+  
+  def withdraw(self, amount):
+    if self.balance >= amount:
+      self.balance -= amount
+      return self
+    else:
+      print('Insufficient balance')
+  
+  def display_account_info(self):
+    print('Balance :' + str(round(self.balance)))
+  
+  def yield_balance(self):
+    if self.balance > 0:
+      self.balance *= (1 + self.int_rate)
+      return self
+    else:
+      pass
+
+pablo = BankAccount()
+dino = BankAccount()
 
 guido.make_deposit(100)
 guido.make_deposit(500)
@@ -59,3 +88,7 @@ pedro.display_user_balance()
 guido.transfer_money(pedro,500)
 
 guido.make_deposit(100).make_deposit(500).make_withdraw(300).display_user_balance()
+
+pablo.deposit(100).deposit(500).deposit(300).withdraw(200).yield_balance().display_account_info()
+
+dino.deposit(400).deposit(500).withdraw(300).withdraw(200).yield_balance().display_account_info()
