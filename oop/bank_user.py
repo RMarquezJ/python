@@ -56,9 +56,6 @@ guido = User('Guido van Rossum', 'guido@python.com')
 monty = User('Monty Python', 'monty@python.com')
 pedro = User('Pedro Picapiedra', 'pedro@python.com')
 
-pablo = BankAccount()
-dino = BankAccount()
-
 guido.create_account()
 guido.make_deposit(100,0)
 guido.make_deposit(500,0)
