@@ -19,3 +19,11 @@ class Store:
     for elem in self.list:
       elem.price *= (1 + (percent/100))
     return self
+  
+  def set_clearance(self, category, percent):
+    for elem in self.list:
+      if elem.cat==category:
+        elem.price *= (1+ (percent/100))
+      else:
+        continue
+    return self

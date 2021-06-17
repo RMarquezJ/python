@@ -18,3 +18,6 @@ donluchito.add_product(jugo).add_product(redbull).add_product(galletas).sell_pro
 
 te.print_info()
 
+donluchito.set_clearance('Abarrotes', 10)
+
+te.print_info()
