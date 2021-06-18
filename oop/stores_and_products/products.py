@@ -9,6 +9,12 @@ class Product:
     self.id = id
 
   def update_price(self, percent, increase):
+    try:
+      percent=int(percent)
+
+    except ValueError:
+      return None
+
     if increase == True:
       self.price *= (1+percent/100)
     

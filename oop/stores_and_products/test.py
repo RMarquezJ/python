@@ -1,16 +1,17 @@
 import unittest
 from products import Product
 
-def prod():
-  pass
+te = Product('caja de té', 1000, 'abarrotes', 1)
 
-class ProdTest(unittest.TestCase):
+class Prodtest(unittest.TestCase):
 
   def setUp(self):
     print('Comenzando prueba de productos')
 
-  def testNum(self):
-    pass
+  def testNoStrings(self):
+    inp = te.update_price('r', True)
+    outp = None
+    self.assertEqual(inp,outp)
 
   def tearDown(self) -> None:
     print('Terminando prueba de productos')
