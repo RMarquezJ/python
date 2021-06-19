@@ -21,7 +21,7 @@ class MathDojo:
     
     return self
 
-  def substract(self, num, *nums):
+  def subtract(self, num, *nums):
 
     try:
       num=int(num)
@@ -47,40 +47,41 @@ class MathDojo:
       return None
 
     numbers=[num]
+
     for i in nums:
       numbers.append(i)
 
+    # o numbers=[num] + nums
+    
     tot=0
     avg=0
     sumat=0
 
     for number in numbers:
       tot += number
-    
     print(tot)
     
     avg=tot/len(numbers)
-
     print(avg)
 
     for number in numbers:
       sumat += (number-avg)**2
-    
     print(sumat)
 
     self.result=(sumat/(len(numbers)))**.5
+    
     return self
 
 md=MathDojo()
 
 
-x = md.add(1,2,3,4,5,6).substract(5,4,3,2,1).result
+x = md.add(1,2,3,4,5,6).subtract(5,4,3,2,1).result
 print(x)
 
-y = md.add(-1,-2,-3,-4,-5).substract(0,-1,-2,-3,-4).result
+y = md.add(-1,-2,-3,-4,-5).subtract(0,-1,-2,-3,-4).result
 print(y)
 
-z = md.add(-2,-1,0,1,2).substract(-1,-2,-3,-4,-5).result
+z = md.add(-2,-1,0,1,2).subtract(-1,-2,-3,-4,-5).result
 print(z)
 
 p = md.standev(3,5,7,9).result
